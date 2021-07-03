@@ -1,12 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
-import {animateBlock} from './components/animateBlock/animateBlock';
+import AnimatedPage from "./components/AnimatedPage/AnimatedPage";
+import {Spring} from "react-spring";
+import React from 'react';
+
 function App() {
     return (
-        <>
+        <div>
             <h1>Hello spring</h1>
-            <animateBlock />
-        </>
+            <AnimatedPage />
+        </div>
     );
 }
 

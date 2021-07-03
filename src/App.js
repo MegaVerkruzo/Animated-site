@@ -7,7 +7,6 @@ import React from 'react';
 function App() {
     return (
         <div>
-            <h1>Hello spring</h1>
             <AnimatedPage />
         </div>
     );

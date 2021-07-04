@@ -5,13 +5,15 @@ import {Spring} from "react-spring";
 import React from 'react';
 import AnimatedImage from "./components/AnimatedImage/AnimatedImage";
 import AnimatedSlides from "./components/AnimatedSlides/AnimatedSlides";
+import AnimatedBasics from "./components/AnimatedBasics/AnimatedBasics";
 
 function App() {
     return (
         <div className="App">
-            <AnimatedPage />
-            <AnimatedImage />
-            <AnimatedSlides />
+            {/*<AnimatedPage />*/}
+            {/*<AnimatedImage />*/}
+            {/*<AnimatedSlides />*/}
+            <AnimatedBasics />
         </div>
     );
 }

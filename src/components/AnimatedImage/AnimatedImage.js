@@ -7,7 +7,7 @@ import nightCity from './../../files/images/nightCity.jpeg';
 const AnimatedImage = () => {
     const [flipped, setFlipped] = useState(false);
 
-    const {opacity, transform, duration} = useSpring({
+    const {opacity, transform, config} = useSpring({
         opacity: flipped ? 1 : 0,
         transform: `perspective(600px) rotateX(${flipped ? 180 : 0}deg)`,
         config: {
@@ -20,12 +20,12 @@ const AnimatedImage = () => {
             <animated.img className={classes.c} style={{
                 opacity: opacity.interpolate(o => 1 - o),
                 transform,
-                duration
+                config
             }} src={sea}></animated.img>
             <animated.img className={classes.c} style={{
                 opacity,
                 transform: transform.interpolate(t => `${t} rotateX(180deg)`),
-                duration
+                config
             }} src={nightCity}></animated.img>
         </div>
     )

@@ -8,7 +8,7 @@ import {Button} from "@material-ui/core";
 const AnimatedPage = () => {
     const [isVisible, setIsVisible] = useState(false);
     const [isFirstTime, setIsFirstTime] = useState(true);
-    const time = 1000;
+    const time = 2000;
 
     const rocket = () => {
         if (isFirstTime) {
@@ -29,7 +29,7 @@ const AnimatedPage = () => {
                 reverse={!isVisible}
             >
                 {props => (<animated.h2 style={props}>
-                    🚀
+                      привет
                 </animated.h2>)}
             </Spring>
             <Transition

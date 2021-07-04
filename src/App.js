@@ -3,11 +3,13 @@ import './App.css';
 import AnimatedPage from "./components/AnimatedPage/AnimatedPage";
 import {Spring} from "react-spring";
 import React from 'react';
+import AnimatedImage from "./components/AnimatedImage/AnimatedImage";
 
 function App() {
     return (
-        <div>
+        <div className="App">
             <AnimatedPage />
+            <AnimatedImage />
         </div>
     );
 }

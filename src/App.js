@@ -9,8 +9,8 @@ import AnimatedSlides from "./components/AnimatedSlides/AnimatedSlides";
 function App() {
     return (
         <div className="App">
-            {/*<AnimatedPage />*/}
-            {/*<AnimatedImage />*/}
+            <AnimatedPage />
+            <AnimatedImage />
             <AnimatedSlides />
         </div>
     );

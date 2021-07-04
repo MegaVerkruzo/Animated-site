@@ -22,39 +22,31 @@ const slides = [
 ]
 
 const AnimatedSlides = () => {
-    const [activeIndex, setActiveIndex] = useState(2);
+    const [activeIndex, setActiveIndex] = useState(0);
     const [previousIndex, setPreviousIndex] = useState(0);
-    let fromRight = true;
 
 
     const transitions = useTransition(activeIndex, {
         key: activeIndex,
-        from: { opacity: 0, transform: `${fromRight ? `translateX(100%)` : `translateX(-100%)`}`},
-        enter: { opacity: 1, transform: `translateX(0%)` },
-        leave: { opacity: 0, transform: `${fromRight ? `translateX(-100%)` : `translateX(100%)`}`},
+        from: { opacity: 0, transform: activeIndex > previousIndex ? `translateX(100%)` : `translateX(-100%)`},
+        enter: () => async next => {
+            await next( { opacity: 1, transform: `translateX(0%)` });
+
+        },
+        leave: { opacity: 0, transform: activeIndex > previousIndex ? `translateX(-100%)` : `translateX(100%)`},
         config: {
-            duration: 750
+            duration: 1250
         }
     });
-
-    const updFrom = () => {
-        if (activeIndex > previousIndex) {
-            fromRight = true;
-        } else {
-            fromRight = false;
-        }
-    }
 
     const previousImage = () => {
         setPreviousIndex(activeIndex);
         setActiveIndex(activeIndex - 1);
-        updFrom();
     }
 
     const nextImage = () => {
         setPreviousIndex(activeIndex);
         setActiveIndex(activeIndex + 1);
-        updFrom();
     }
 
     return (

@@ -29,21 +29,9 @@ const AnimatedPage = () => {
                 reverse={!isVisible}
             >
                 {props => (<animated.h2 style={props}>
-                      привет
+                      Пососи
                 </animated.h2>)}
             </Spring>
-            <Transition
-                items={isVisible}
-                enter={{opacity: 1, transform: 'translateY(0rem)'}}
-                leave={{opacity: 0, transform: 'translateY(-3rem)'}}
-                from={{opacity: 0, transform: 'translateY(-3rem)'}}
-            >
-                {item =>
-                    item &&
-                    (props => (<h2 style={props}>
-                    🚀
-                </h2>))}
-            </Transition>
             <Button variant="contained" onClick={rocket}>{isVisible ? 'Скрыть' : 'Показать'}</Button>
         </div>
     )

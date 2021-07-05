@@ -13,9 +13,9 @@ const Hello = () => {
         },
         reset: true,
         reverse: isVisible,
-        delay: 5000,
+        delay: 200,
         config: {
-            duration: 2000
+            duration: 1000
         },
         onRest: () => setIsVisible(!isVisible)
     })

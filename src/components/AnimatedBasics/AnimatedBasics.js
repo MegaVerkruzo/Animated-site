@@ -1,12 +1,13 @@
 import React, {useState} from 'react'
 import {useSpring, animated} from 'react-spring'
 import Hello from "./Hello/Hello";
+import Number from "./Number/Number";
 
 const AnimatedBasics = () => {
     return (
         <div>
             <Hello />
-            <Star />
+            <Number />
         </div>
     )
 }
